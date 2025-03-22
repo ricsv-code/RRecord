@@ -1,0 +1,32 @@
+﻿<Window x:Class="RRecord.CaptureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CaptureWindow"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="True"
+        PreviewMouseLeftButtonDown="Window_PreviewMouseLeftButtonDown"
+        PreviewMouseMove="Window_PreviewMouseMove"
+        PreviewMouseLeftButtonUp="Window_PreviewMouseLeftButtonUp">
+
+    <Canvas x:Name="RootCanvas">
+        <!-- Visuella element -->
+        <Rectangle x:Name="BorderRect"
+                   Fill="Transparent"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   StrokeDashArray="4 2"
+                   IsHitTestVisible="False" />
+        <Rectangle x:Name="AnchorRect"
+                   Fill="LightBlue"
+                   Width="24" Height="24"
+                   IsHitTestVisible="False" />
+
+        <!-- Hit area: täcker hela fönstret och är placerad ovanför -->
+        <Rectangle x:Name="HitRect"
+                   Fill="#01FFFFFF"
+            IsHitTestVisible="True" />
+    </Canvas>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="RRecord.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ToolBar"
+        ShowInTaskbar="False"
+        Height="100" Width="400">
+    <Grid x:Name="root">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
+                <Ellipse x:Name="RecordingIndicator" Width="15" Height="15" Fill="{Binding RecordIndicatorFill, FallbackValue='Red'}" Margin="10,0,0,0"/>
+                <TextBlock Text="{Binding StatusText, FallbackValue='Recording..'}" FontWeight="Bold" FontSize="15" Margin="8,0,0,2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="CreateCaptureBtn" Content="Create" Command="{Binding CreateCommand}" IsEnabled="{Binding CreateButtonEnabled}" Margin="5" />
+                <Button x:Name="RecordBtn" Content="Record" Command="{Binding RecordCommand}" IsEnabled="{Binding RecordButtonEnabled}" Margin="5"/>
+                <Button x:Name="StopBtn" Content="Stop" Command="{Binding StopCommand}" IsEnabled="{Binding StopButtonEnabled}" Margin="5"/>
+                <Button x:Name="PlayBtn" Content="Play" Command="{Binding PlayCommand}" IsEnabled="{Binding PlayButtonEnabled}" Margin="5"/>
+                <Button x:Name="SaveVideoBtn" Content="Save Video" Command="{Binding SaveVidCommand}" IsEnabled="{Binding SaveVideoButtonEnabled}" Margin="5"/>
+                <Button x:Name="SaveGifBtn" Content="Save Gif" Command="{Binding SaveGifCommand}" IsEnabled="{Binding SaveGifButtonEnabled}" Margin="5"/>
+                <Button x:Name="AudioDeviceBtn" Content="AudioDevice" Command="{Binding AudioDeviceCommand}" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

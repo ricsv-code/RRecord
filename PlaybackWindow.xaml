@@ -1,0 +1,40 @@
+﻿<Window x:Class="RRecord.PlaybackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
+        Title="Playback" Height="450" Width="800">
+    <Grid x:Name="root">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <!-- VideoView där videon spelas upp, samt inbäddat innehåll för event -->
+        <vlc:VideoView x:Name="Player" Grid.Row="0">
+            <Grid Background="#02000000">
+                <!-- Överlägg kan placeras här om nödvändigt -->
+            </Grid>
+        </vlc:VideoView>
+
+        <!-- Kontrollerna -->
+        <StackPanel Orientation="Vertical" Background="#AA000000" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5">
+                <Button Content="Play" Width="75" Margin="5" Command="{Binding PlayCommand}" />
+                <Button Content="Pause" Width="75" Margin="5" Command="{Binding PauseCommand}" />
+                <Button Content="Open" Width="75" Margin="5" Command="{Binding OpenCommand}" />
+            </StackPanel>
+            <Slider x:Name="ProgressSlider"
+                Minimum="0" Maximum="100"
+                Width="400" Margin="5"
+                Value="{Binding Progress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                PreviewMouseMove="ProgressSlider_PreviewMouseMove"
+                PreviewMouseLeftButtonDown="ProgressSlider_PreviewMouseLeftButtonDown"
+                PreviewMouseLeftButtonUp="ProgressSlider_PreviewMouseLeftButtonUp" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="2" Text="{Binding TimeDisplay}" Width="Auto"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="White" Background="#AA000000" Padding="5"/>
+    </Grid>
+</Window>
