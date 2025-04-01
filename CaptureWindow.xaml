@@ -12,7 +12,7 @@
         PreviewMouseLeftButtonUp="Window_PreviewMouseLeftButtonUp">
 
     <Canvas x:Name="RootCanvas">
-        <!-- Visuella element -->
+
         <Rectangle x:Name="BorderRect"
                    Fill="Transparent"
                    Stroke="Red"
@@ -24,7 +24,7 @@
                    Width="24" Height="24"
                    IsHitTestVisible="False" />
 
-        <!-- Hit area: täcker hela fönstret och är placerad ovanför -->
+
         <Rectangle x:Name="HitRect"
                    Fill="#01FFFFFF"
             IsHitTestVisible="True" />

@@ -48,7 +48,7 @@ namespace RRecord
                 Width = 1,
                 Height = 1,
                 ParentWindow = IntPtr.Zero,
-                WindowStyle = unchecked((int)0x80000000) // WS_POPUP
+                WindowStyle = unchecked((int)0x80000000) 
             };
 
             _source = new HwndSource(parameters);

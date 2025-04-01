@@ -18,8 +18,8 @@ namespace Services
         /// </summary>
         /// <param name="x">Offset X.</param>
         /// <param name="y">Offset Y.</param>
-        /// <param name="width">Bredd på inspelningsområdet.</param>
-        /// <param name="height">Höjd på inspelningsområdet.</param>
+        /// <param name="width"/>
+        /// <param name="height"/>
         /// <param name="audioDeviceName">Namn på ljudenhet. Om null, inspelas ingen ljud.</param>
         public void StartRecording(int x, int y, int width, int height, string audioDeviceName = null)
         {
@@ -27,7 +27,7 @@ namespace Services
             string tempVideoPath = TempFileManager.GetTempVideoFilePath();
 
             var argsBuilder = new StringBuilder();
-            argsBuilder.Append("-y "); // Överskriv output-fil utan prompt
+            argsBuilder.Append("-y "); // yes till att overwritea output
 
             argsBuilder.Append($"-f gdigrab -framerate 30 -offset_x {x} -offset_y {y} ");
             argsBuilder.Append($"-video_size {width}x{height} -i desktop ");

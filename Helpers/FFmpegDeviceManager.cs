@@ -6,10 +6,7 @@ using System.Text.RegularExpressions;
 
 public class FFmpegDeviceManager
 {
-    /// <summary>
-    /// Hämtar en lista över tillgängliga DirectShow-ljudenheter via FFmpeg.
-    /// </summary>
-    /// <returns>Lista med ljudenhetsnamn.</returns>
+    //ej testad
     public List<string> GetAudioDevices()
     {
         List<string> audioDevices = new List<string>();

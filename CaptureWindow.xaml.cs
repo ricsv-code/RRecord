@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
-using System.Windows.Forms; // För Cursor.Position
 
 namespace RRecord
 {

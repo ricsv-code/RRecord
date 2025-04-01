@@ -10,14 +10,12 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
-        <!-- VideoView där videon spelas upp, samt inbäddat innehåll för event -->
         <vlc:VideoView x:Name="Player" Grid.Row="0">
             <Grid Background="#02000000">
-                <!-- Överlägg kan placeras här om nödvändigt -->
+
             </Grid>
         </vlc:VideoView>
 
-        <!-- Kontrollerna -->
         <StackPanel Orientation="Vertical" Background="#AA000000" Grid.Row="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5">
                 <Button Content="Play" Width="75" Margin="5" Command="{Binding PlayCommand}" />

@@ -8,7 +8,7 @@ namespace Helpers
         private static string _tempVideoFilePath;
 
         /// <summary>
-        /// Genererar en temporär filväg för videoinspelning.
+        /// Genererar en temporär filväg för videoinspelning
         /// </summary>
         public static string GetTempVideoFilePath()
         {
@@ -31,7 +31,7 @@ namespace Helpers
         }
 
         /// <summary>
-        /// Raderar temporärvideon om den finns.
+        /// Raderar temporärvideon om den finns
         /// </summary>
         public static void DeleteTempVideo()
         {

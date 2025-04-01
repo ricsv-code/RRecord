@@ -7,12 +7,7 @@ namespace Helpers
 {
     public static class FileConverter
     {
-        /// <summary>
-        /// Konverterar en videofil (MP4 etc) till GIF med hjälp av Xabe.FFmpeg.
-        /// </summary>
-        /// <param name="inputPath">Sökväg till ursprunglig videofil.</param>
-        /// <param name="outputPath">Sökväg till GIF-fil.</param>
-        /// <param name="fps">Bildrutor per sekund i GIF.</param>
+
         public static async Task ConvertToGifAsync(string inputPath, string outputPath, int fps = 10)
         {
             if (!File.Exists(inputPath))
